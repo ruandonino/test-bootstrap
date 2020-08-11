@@ -47,3 +47,7 @@ body{
 .navbar-dark{
     background: #512DA8;
 }
+
+.button-submit{
+    margin-left: 120px;
+}
