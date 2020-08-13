@@ -3,6 +3,8 @@ $background-dark: #512DA8;
 $background-light: #9575CD;
 $background-pale: #D1C4E9;
 
+
+
 // Height variables
 $carousel-item-height: 300px;
 
@@ -10,6 +12,25 @@ $carousel-item-height: 300px;
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
 	margin:0px auto;
 	padding: $pad-up-dn $pad-left-right;
+}
+
+@mixin paint-modal($color-head: $background-dark, $close-button: floralwhite,$textColor: floralwhite) {
+    .modal-header{
+        background-color: $color-head;
+        .modal-title{
+            color:$textColor;
+        }
+
+        .close{
+            color: $close-button;
+        }
+    }
+
+    .modal-body{
+        background-color: $background-pale;
+    }
+    
+    
 }
 
 .row-header{
@@ -75,3 +96,8 @@ body{
     bottom: 0px;
     z-index: 1;
 }
+
+.modal{
+    @include paint-modal();
+}
+
